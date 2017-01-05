@@ -10,14 +10,14 @@ namespace Snake
     {
         public int x;
         public int y;
-        public char sym;
+        public string sym;
 
         public Point()
         {
-            Console.WriteLine("Create new point");
+            /*Console.WriteLine("Create new point");*/
         }
 
-        public Point(int _x, int _y, char +sym)
+        public Point(int _x, int _y, string _sym)
         {
             x = _x;
             y = _y;
@@ -29,5 +29,6 @@ namespace Snake
             Console.SetCursorPosition(x, y);
             Console.Write(sym);
         }
+
     }
 }
