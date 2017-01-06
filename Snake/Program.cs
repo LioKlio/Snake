@@ -14,7 +14,7 @@ namespace Snake
             Func1(x);
             Console.WriteLine("Call Func1. x = " + x);     
 
-            x = 1;
+            x = 3;
             Func2(x);
             Console.WriteLine("Call Func2. x = " + x);
 
@@ -28,7 +28,12 @@ namespace Snake
             /*p1.Draw();*/
 
             Point p2 = new Point(2,4,"#");
+            Reset(p2);
             /*p2.Draw();*/
+
+            Console.WriteLine("1 p1.x = " + p1.x + "; p2.x = " + p2.x);
+            p1 = p2;
+            Console.WriteLine("2 p1.x = " + p1.x + "; p2.x = " + p2.x);
 
             Console.ReadLine();
         }
@@ -45,6 +50,10 @@ namespace Snake
         {
             p.x = p.x + dx;
             p.y = p.y + dy;
+        }
+        public static void Reset(Point p)
+        {
+            p = new Point();
         }
     }
 }
