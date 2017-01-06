@@ -9,19 +9,19 @@ namespace Snake
     class Program
     {
         static void Main(string[] args)
-        {  
+        {
+            Console.SetWindowSize(80, 25);
+            Console.SetBufferSize(80, 25);
 
-            /*Point p1 = new Point(1,2,"*");
-            p1.Draw();
+            HorizontalLine lineH1 = new HorizontalLine(0, 78, 0, "*");
+            HorizontalLine lineH2 = new HorizontalLine(0, 78, 24, "*");
+            lineH1.Drow();
+            lineH2.Drow();
 
-            Point p2 = new Point(2,4,"#");
-            p2.Draw();*/
-
-            HorizontalLine lineH = new HorizontalLine(5,10,8,"_");
-            lineH.Drow();
-
-            VerticalLine lineV = new VerticalLine(3,2,4,"|");
-            lineV.Drow();
+            VerticalLine lineV1 = new VerticalLine(0, 1, 24, "*");
+            VerticalLine lineV2 = new VerticalLine(78, 0, 24, "*");
+            lineV1.Drow();
+            lineV2.Drow();
 
             Console.ReadLine();
         }
